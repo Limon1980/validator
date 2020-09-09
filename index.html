@@ -15,7 +15,7 @@
 
 <body>
   <section>
-    <form id="myForm" autocomplete="off">
+    <form id="myform" autocomplete="off">
       <label for="phone">phone</label>
       <input type="text" id="phone" name="phone" placeholder="phone">
       <label for="email">email</label>
@@ -26,8 +26,16 @@
 
     </form>
   </section>
-  <script src="js/maskPhone.js"></script>
-	<script src="js/script.js" defer></script>
+  <script src="plugins/validator/validator.js"></script>
+  <script>  
+    const valid = new Validator({
+      selector: '#myform',
+      pattern: {},
+      method: {}
+    });
+
+    valid.init();
+  </script>
 </body>
 
 </html>
